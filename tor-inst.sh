@@ -26,6 +26,7 @@ case $input_main in
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         sleep 3
         brew install tor
+        # Sets SOCKS proxy on port 9050    
         sudo networksetup -setsocksfirewallproxy Wi-Fi 127.0.0.1 9050
         sudo echo "Tor SOCKS proxy set."
         sleep 1 
@@ -87,3 +88,4 @@ case $input_main in
     ;;
 esac
     
+# If you start tor and then stop it using the CLI command "brew services stop tor", ONLY the tor service will stop, but the SOCKS WiFi proxy state will remain on. Due to this, you may experience internet connectivity issues. To prevent this, use the option in the tor manager script to turn it off. If you still experience problems, terminate all the processes and restart your Mac.
