@@ -2,7 +2,7 @@
 sudo clear
 sudo echo "--------------------------------------------------------"
 sudo echo "                  Tor Manager v0.1"
-sudo echo "             by Sam Victor(@matchaswirls)"
+sudo echo "             by Sam Victor(@saminit)"
 sudo echo "--------------------------------------------------------"
 sudo echo "Tor will automatically start after installation runs."
 sleep 1
